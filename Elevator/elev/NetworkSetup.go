@@ -212,11 +212,7 @@ func IdCommunication() {
 			setMasterId(peerUpdateMessage)
 			setBackupId(peerUpdateMessage)
 		case message := <-incomingMessageChannel:
-			//fmt.Printf("Received: %#v\n", message)
 			AddClientInfo(message)
-			//for _, elem := range ClientTable {
-			//fmt.Println("Client Table - element:   ", elem)
-			//}
 		}
 	}
 }
