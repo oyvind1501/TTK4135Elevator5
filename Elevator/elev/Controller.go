@@ -56,7 +56,6 @@ func ActionController(buttonChannel chan elevio.ButtonEvent, lightChannel chan L
 				}
 				openDoorAtFloor = buttonEvent.Floor
 				doorOpenedAtFloor = true
-				fmt.Println(buttonEvent.Floor)
 			case (elevio.ButtonType)(BUTTON_HALL_DOWN):
 				sendChannel <- ElevatorOrderMessage{
 					Event:     EVENT_NEW_ORDER,
